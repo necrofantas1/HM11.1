@@ -29,19 +29,19 @@ class Program
         if (gameDifficulty == 1)
         {
             attempts = 6;
-            Console.WriteLine($"You choose easy level, you have {attempts} to guess the word, good luck!");
+            Console.WriteLine($"\nYou choose easy level, you have {attempts} to guess the word, good luck!");
         }
 
         if (gameDifficulty == 2)
         {
             attempts = 4;
-            Console.WriteLine($"You choose medium level, you have {attempts} attempts to guess the word, good luck!");
+            Console.WriteLine($"\nYou choose medium level, you have {attempts} attempts to guess the word, good luck!");
         }
 
         if (gameDifficulty == 3)
         {
             attempts = 2;
-            Console.WriteLine($"You choose hard level, you have {attempts} attempts to guess the word, good luck!");
+            Console.WriteLine($"\nYou choose hard level, you have {attempts} attempts to guess the word, good luck!");
 
         }
     }
@@ -51,7 +51,7 @@ class Program
         int difficultyChoice = 0;
         bool isValidInput = false;
 
-        do
+        while(!isValidInput ) 
         {
             Console.WriteLine("Choose difficulty: 1 - Easy, 2 - Medium, 3 - Hard");
             string userChoice = Console.ReadLine();
@@ -65,8 +65,6 @@ class Program
                 Console.WriteLine("Invalid input. Please enter 1, 2, or 3.");
             }
         }
-        while (!isValidInput);
-
         return difficultyChoice;
 
     }
